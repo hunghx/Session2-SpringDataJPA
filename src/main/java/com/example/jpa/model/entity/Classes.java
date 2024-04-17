@@ -1,5 +1,6 @@
 package com.example.jpa.model.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -19,5 +20,6 @@ public class Classes {
     private String id;
     private String name;
     @OneToMany(mappedBy = "classes")
+    @JsonIgnore
     private List<Student> students;
 }

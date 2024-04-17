@@ -1,5 +1,7 @@
 package com.example.jpa.model.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -22,5 +24,7 @@ public class Student {
     private int age;
     @ManyToOne(fetch = FetchType.LAZY,cascade = CascadeType.ALL)
     @JoinColumn(name = "class_id")
+    //@JsonIgnore // bỏ qua khi ep ve json
+    @JsonIgnoreProperties({"id"})
     private Classes classes;
 }
