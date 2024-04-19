@@ -22,9 +22,9 @@ public class Student {
     private  int studentId;
     private String name;
     private int age;
-    @ManyToOne(fetch = FetchType.LAZY,cascade = CascadeType.ALL)
-    @JoinColumn(name = "class_id")
+//    @ManyToOne(fetch = FetchType.EAGER,cascade = CascadeType.ALL)
+//    @JoinColumn(name = "class_id")
     //@JsonIgnore // bỏ qua khi ep ve json
-    @JsonIgnoreProperties({"id"})
-    private Classes classes;
+//    @JsonIgnoreProperties({"id"})
+//    private Classes classes;
 }

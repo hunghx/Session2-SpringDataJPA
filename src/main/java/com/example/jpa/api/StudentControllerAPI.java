@@ -13,6 +13,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api.example.com/students")
+@CrossOrigin("*")
 public class StudentControllerAPI {
     @Autowired
     private StudentRepo studentRepo;
@@ -45,7 +46,6 @@ public class StudentControllerAPI {
     // xoa
     @DeleteMapping("/{id}")
     public ResponseEntity<?> doDelete(@PathVariable Integer id){
-        studentRepo.findById(id).orElseThrow(() -> new RuntimeException("id not found"));
         studentRepo.deleteById(id);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }

@@ -26,7 +26,7 @@ public class StudentController {
     private ClassessRepo classessRepo;
     @RequestMapping
     public String test(@RequestParam(defaultValue = "0") int page, Model model){
-        List<StudentResponse> students = studentRepo.getAll();
+//        List<StudentResponse> students = studentRepo.getAll();
         List<Student> student1s = studentRepo.findAll();
 
         // Pageable

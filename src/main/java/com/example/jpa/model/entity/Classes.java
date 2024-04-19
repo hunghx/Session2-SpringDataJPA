@@ -19,7 +19,7 @@ public class Classes {
     @GeneratedValue(strategy = GenerationType.UUID)
     private String id;
     private String name;
-    @OneToMany(mappedBy = "classes")
-    @JsonIgnore
-    private List<Student> students;
+//    @OneToMany(mappedBy = "classes")
+//    @JsonIgnore
+//    private List<Student> students;
 }
